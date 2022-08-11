@@ -1,10 +1,5 @@
 :root {
-    --black: #181A18;
-    --dkblue: #0d314b;
-    --plum: #4b0d49;
-    --hotmag: #ff17e4;
-    --magenta: #e310cb;
-    --aqua: #86fbfb;
+    --black: #222222;
     --white: #f7f8fa;
     --hillsgreen: #A3B2A4;
     --balancegreen: #C3C6A8;
@@ -13,6 +8,10 @@
     --beige: #C1B2A2;
     --pink: #E4D5D3 ;
     --brown: #a64b2a;
+    --lightYellow: #ffcc66;
+    --lightRed: #f2777a;
+    --lightGreen: #99cc99;
+    --lightBlue: #6699cc;
     --font-size: 1.3rem;
     --mono: "Oxygen mono", monospace;
     --sans: Oxygen, sans-serif;
@@ -25,7 +24,6 @@
 
 html {
     box-sizing: border-box;
-    
 }
 
 *,
@@ -41,7 +39,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--sans);
-    background-color: var(--hillsgreen);
+    background-color: var(--black);
     color: var(--white);
     font-size: var(--font-size);
 }
@@ -53,11 +51,11 @@ h3 {
 }
 
 a {
-    color: var(--pink);
+    color: var(--lightBlue);
 }
 
 a:hover {
-    color: var(--black);
+    color: var(--lightGreen);
     text-decoration: none;
 }
 
@@ -75,18 +73,18 @@ a:hover {
 
 /* intro styles */
 
-#intro {
-    padding: 3rem 1rem 10rem 1rem;
+#terminal {
+    padding: 3rem 1rem 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-#intro p {
+#terminal p {
     font-size: 1rem;
     line-height: 1.5;
 }
 
-#intro .name {
+#terminal .name {
     font-family: var(--mono);
     font-size: 1rem;
 }
@@ -94,13 +92,24 @@ a:hover {
 .name span {
     font-family: var(--sans);
     font-size: 4rem;
-    color: var(--larbgai);
+    color: var(--lightGreen);
     display: block;
     font-weight: 300;
 }
 
-#intro h2 {
-    font-size: 4rem;
+
+.prompt{
+    margin-top: 2rem;
+    font-size: 3rem;
+    animation:blinkingText 1.3s infinite;
+}
+
+@keyframes blinkingText{
+    0%{     color: var(--white);    }
+    49%{    color: var(--white); }
+    60%{    color: transparent; }
+    99%{    color: transparent;  }
+    100%{   color: var(--white);    }
 }
 
 
@@ -111,14 +120,28 @@ a:hover {
     padding: 1rem 4rem;
 }
 
+article {
+  margin-bottom: 3rem;
+}
+
 #projects h4 {
     margin: 0;
     font-size: 1rem;
     text-align: right;
+    color: var(--lightRed);
 }
 
 #projects h3 {
     text-align: right;
+}
+
+#left_float {
+  text-align: left !important;
+}
+
+#projects p {
+  font-size: 1.1rem;
+  text-align: justify;
 }
 
 #latest-description {
@@ -130,7 +153,7 @@ a:hover {
     width: 400px;
     text-align: center;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 
 #contact p:last-child {
@@ -182,7 +205,7 @@ nav a {
 
 nav a:hover,
 nav [class*="fa-"]:hover {
-    color: var(--black);
+    color: var(--lightGreen);
 }
 
 .button {
@@ -201,19 +224,9 @@ nav [class*="fa-"]:hover {
 /* footer section */
 
 .footer {
-    text-align: center;
-    color: var(--brown);
-}
-
-footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 2rem 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 3rem;
-    font-size: 3rem;
+    text-align: right;
+    color: var(--white);
+    margin-right: 1rem; 
 }
 
 @media (min-width: 850px) {
