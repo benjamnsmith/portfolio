@@ -1,0 +1,229 @@
+:root {
+    --black: #181A18;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --hillsgreen: #A3B2A4;
+    --balancegreen: #C3C6A8;
+    --chai: #EFDBB2;
+    --larbgai: #E0C6AD ;
+    --beige: #C1B2A2;
+    --pink: #E4D5D3 ;
+    --brown: #a64b2a;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+/* https://colorpalettes.io/pastel-earth-tone-color-palette/ */
+/* https://colorhunt.co/palette/8e3200a64b2ad7a86effebc1 */
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+
+html {
+    box-sizing: border-box;
+    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* generic styles for the page */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--hillsgreen);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--pink);
+}
+
+a:hover {
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* background styles */
+
+.line {
+    height: 2px;
+    background: linear-gradient(90deg, rgba(228,213,211,1) 33%, rgba(193,178,162,1) 66%);
+}
+
+.footer {
+    font-size: 1rem;
+}
+
+
+/* intro styles */
+
+#intro {
+    padding: 3rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+    font-size: 1rem;
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--larbgai);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h2 {
+    font-size: 4rem;
+}
+
+
+
+/* projects section */
+
+#projects {
+    padding: 1rem 4rem;
+}
+
+#projects h4 {
+    margin: 0;
+    font-size: 1rem;
+    text-align: right;
+}
+
+#projects h3 {
+    text-align: right;
+}
+
+#latest-description {
+    font-size: 0.5rem;
+}
+/* contact section */
+
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+#contact p:last-child {
+    margin-top: 3rem;
+}
+
+
+/* navigation */
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--black);
+}
+
+.button {
+    background-color: var(--magenta);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: white;
+    background-color: var(--hotmag);
+}
+
+
+/* footer section */
+
+.footer {
+    text-align: center;
+    color: var(--brown);
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
