@@ -133,10 +133,12 @@ article {
 
 #projects h3 {
     text-align: right;
+    font-weight: bold;
 }
 
 #left_float {
   text-align: left !important;
+  font-weight: bold;
 }
 
 #projects p {
