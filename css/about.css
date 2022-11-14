@@ -1,10 +1,5 @@
 :root {
-    --black: #181A18;
-    --dkblue: #0d314b;
-    --plum: #4b0d49;
-    --hotmag: #ff17e4;
-    --magenta: #e310cb;
-    --aqua: #86fbfb;
+    --black: #222222;
     --white: #f7f8fa;
     --hillsgreen: #A3B2A4;
     --balancegreen: #C3C6A8;
@@ -13,6 +8,10 @@
     --beige: #C1B2A2;
     --pink: #E4D5D3 ;
     --brown: #a64b2a;
+    --lightYellow: #ffcc66;
+    --lightRed: #f2777a;
+    --lightGreen: #99cc99;
+    --lightBlue: #6699cc;
     --font-size: 1.3rem;
     --mono: "Oxygen mono", monospace;
     --sans: Oxygen, sans-serif;
@@ -39,7 +38,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--sans);
-    background-color: var(--hillsgreen);
+    background-color: var(--black);
     color: var(--white);
     font-size: var(--font-size);
 }
@@ -51,11 +50,11 @@ h3 {
 }
 
 a {
-    color: var(--pink);
+    color: var(--lightBlue);
 }
 
 a:hover {
-    color: var(--black);
+    color: var(--lightGreen);
     text-decoration: none;
 }
 
@@ -92,7 +91,7 @@ a:hover {
 .name span {
     font-family: var(--sans);
     font-size: 4rem;
-    color: var(--larbgai);
+    color: var(--lightGreen);
     display: block;
     font-weight: 300;
 }
@@ -178,7 +177,7 @@ nav a {
 
 nav a:hover,
 nav [class*="fa-"]:hover {
-    color: var(--black);
+    color: var(--lightGreen);
 }
 
 .button {
