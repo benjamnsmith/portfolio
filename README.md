@@ -1,2 +1,2 @@
 # portfolio
-[benjamnsmith.com](https://benjamnsmith.com)
+<a href="https://benjamnsmith.com" target="_blank">benjamnsmith.com</a>
