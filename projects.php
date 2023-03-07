@@ -10,26 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
   <link href="./css/projects.css" rel="stylesheet">
-  <title>Projects</title>
+  <title>benjamnsmith - Projects</title>
 </head>
 
 <body>
-  <nav class="navbar">
-    <ul>
-      <li>
-        <h1><a href='./index.html'> <span class="fa-solid fa-terminal"></span> benjamnsmith</h1></a></span>
-      <li><a href='./projects.html'>Projects</a></li>
-      <li><a href='./about.html'>About</a></li>
-      <li><a href='#contact'>Contact</a></li>
-      <li><a href='https://www.linkedin.com/in/benjamnsmith' target="_blank"><span class="fa-brands fa-linkedin-in" aria-hidden=true></span><span class="sr-only">LinkedIn</span></a></li>
-      <li><a href='https://github.com/benjamnsmith' target="_blank"><span class="fa-brands fa-github" aria-hidden=true></span><span class="sr-only">GitHub</span></a></li>
-      <li><a href='#'>Resume</a></li>
-    </ul>
-  </nav>
+  <?php
+    
+    include "navbar.html";
+    
+    ?>
 
   <section id="intro">
     <p class="name">Here are some<span>Projects</span>I've been working on</p>
-
+    <p>The majority of my projects can be found on my <a href="https://github.com/benjamnsmith" target="_blank">GitHub</a></p>
 
   </section>
   <div class="line"></div>
@@ -59,7 +52,7 @@
       <div class="line"></div>
       <article>
         <h3>A study on typo-tolerant password verification</h3>
-        <p>Testing and analysis of a typo-tolerant password verficiation system (proposed in this paper).
+        <p>Testing and analysis of a typo-tolerant password verficiation system (proposed in <a href="https://typtop.info/" target="_blank">this paper</a>).
           For my CSCI 5271 computer security final project.
         </p>
       </article>

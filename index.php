@@ -9,28 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
     <link href="./css/styles.css" rel="stylesheet">
+    
     <title>benjamnsmith</title>
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li>
-        <h1><a href='./index.html'> <span class="fa-solid fa-terminal"></span> benjamnsmith</h1></a></span>
-      <li><a href='./projects.html'>Projects</a></li>
-      <li><a href='./about.html'>About</a></li>
-      <li><a href='#contact'>Contact</a></li>
-      <li><a href='https://www.linkedin.com/in/benjamnsmith' target="_blank"><span class="fa-brands fa-linkedin-in" aria-hidden=true></span><span class="sr-only">LinkedIn</span></a></li>
-      <li><a href='https://github.com/benjamnsmith' target="_blank"><span class="fa-brands fa-github" aria-hidden=true></span><span class="sr-only">GitHub</span></a></li>
-      <li><a href='#'>Resume</a></li>
-    </ul>
-  </nav>
+    
+    <?php
+    
+    include "navbar.html";
+    
+    ?>
   
   <section id="terminal">
-    <p class="name">Hi, my name is <span>Ben</span></p>
+    <p class="name">Hi, my name is <span></span></p>
   
-    <h3>I design and analyze the internet</h3>
-  
-    <h3 class="prompt">></h3>
+    <!-- <h3>I design and analyze the internet</h3> -->
+    <h3>This will say something cute ^^</h3>
+    
+    <h3 class="prompt">  </h3>
   
   </section>
   <div class="line"></div>
@@ -53,27 +49,23 @@
     </article>
     <article>
       <h3>Typo-tolerant password security</h3>
-      <p>For my computer security class, we analyzed a typo-tolerant password system (some really great work out of the University of Wisconsin - Madison, you can read about it on the <a href="#">TypTop</a> website). We drew on work in computational linguistics to try and get the system to authorize us based on likely typos.</p>
+      <p>For my computer security class, we analyzed a typo-tolerant password system (some really great work out of the University of Wisconsin - Madison, you can read about it on the <a href="https://typtop.info/" target="_blank">TypTop</a> website). We drew on work in computational linguistics to try and get the system to authorize us based on likely typos.</p>
     </article>
     <p>You can read about more of my projects on the <a href="./projects.html">Projects</a> page.</p>
   </section>
-  <div class="line"></div>
   <!-- <section id="contact">
     <div class="contact-box">
       <h3>Contact Me</h3>
       <p>I'm always interested in hearing from people.<br> You can reach me at my <a href="#">email</a>.</p>
     </div>
   </section> -->
-  <div class="line"></div>
-  <section class="footer">
-    <div>
-      <p>The styling from this website is based off of <a href="https://github.com/KabbAmine/yowish.vim" target="_blank">Yowish</a>, my vim color scheme :)</p>
-    </div>
-    <div>
-      <p>Benjamin Smith</p>
-      <p>Made with love in 2022. All Rights Reserved.</p>
-    </div>
-  </section>
+  <?php
+    
+    include "footer.html";
+    
+    ?>
+  
     
 </body>
+<script src="./index.js" defer></script>
 </html>
