@@ -93,15 +93,26 @@ a:hover {
     font-family: var(--sans);
     font-size: 4rem;
     color: var(--lightGreen);
-    display: block;
+    display: flex;
     font-weight: 300;
+    align-items: center;
+    gap: 2px;
+}
+
+.name span::after {
+    content: "";
+    width: 3px;
+    height: 4rem;
+    background: black;
+    display: inline-block;
+    animation: cursor-blink 1.2s steps(2) infinite;
 }
 
 
 .prompt{
     margin-top: 2rem;
     font-size: 3rem;
-    animation:blinkingText 1.3s infinite;
+    animation: blinkingText 1.3s infinite;
 }
 
 @keyframes blinkingText{
@@ -112,12 +123,19 @@ a:hover {
     100%{   color: var(--white);    }
 }
 
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+  }
+  
+
 
 
 /* projects section */
 
 #projects {
-    padding: 1rem 4rem;
+    padding: 1rem 10%;
 }
 
 article {
