@@ -8,8 +8,8 @@ const container = document.getElementsByClassName('name')[0].children[0]
 curTxt = txts[j]
 
 function typeWriter() {
-    if (i < curTxt.length) {
-        container.innerHTML += curTxt.charAt(i);
+    if (i < curTxt.length ) {
+        container.innerHTML = curTxt[0] +  curTxt.slice(1, i+1);
       i++;
       setTimeout(typeWriter, speed);
     } else {
@@ -19,7 +19,7 @@ function typeWriter() {
 
 function unTypeWrite(){
     if (i >= 0){
-        container.innerHTML = curTxt[0] + curTxt.slice(0, i);
+        container.innerHTML = curTxt[0] + curTxt.slice(1, i);
         i--;
         setTimeout(unTypeWrite, speed);
     } else {
