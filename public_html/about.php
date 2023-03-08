@@ -49,7 +49,7 @@
         <p class="quick_facts">
         I'm interested in any programming language that allows me to hack together what I'm looking to achieve. I mostly use <span>Python</span> 
             (<span class="subtype">Apache Thrift</span>, <span class="subtype">Flask</span>), but recently have been intrigued by <span>JavaScript</span>. 
-            This website is written mostly in <span>PHP</span>. In school, <span>C</span> was my language of choice. 
+            This website is written almost completely in <span>PHP</span>. In school, <span>C</span> was my language of choice. 
             <br>
             <br>
             I've recently become geeked about HTB and would love to share my experience there with you. Take a peek at my 
