@@ -9,43 +9,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
-    <link href="./css/about.css" rel="stylesheet">
+    <link href="./css/blog.css" rel="stylesheet">
     <title>benjamnsmith - Blog</title>
 </head>
 
 <body>
-    <?php
+
+<?php
     
-        include "navbar.html";
+    include "navbar.html";
+
+    include "../php/db_conn.php";
+
+    $stmt = $pdo->prepare('SELECT title, body, created FROM `post` WHERE id = ?');
+
+    $stmt->execute([$_GET["id"]]);
+
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
     
     ?>
-     <section id="intro">
-        <p class="name"><span>Blog</span></p>
-        <p>This is mostly HTB lab writeups</p>
+    <section id="intro">
+        <p class="name"><span>Blog - 
+            <?php
+                echo $row["title"]
+            ?>
+        </span></p>
     </section>
     <div class="line"></div>
     <section>
+
+
+<?php
+    echo '
+        <div>
+        <p class="post_body">' .$row["body"] . '</p>
+        </div>
+    
+    ';
+
+?>
+
+     
+  
         
     </section>
 
-    <?php
 
-        $password = "";
-
-        // Create connection
-        $conn = new mysqli("benjamnsmith.com", "u586242817_ben", $password, "u586242817_bensmith_posts");
-
-        // Check connection
-        if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-        }
-        echo "Connected successfully";
-    ?> 
-
-    <?php
-    
-        include "footer.html";
-    
-    ?>
 
 </body>
+
+</html>
