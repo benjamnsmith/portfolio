@@ -23,7 +23,7 @@
   <section id="terminal">
     <p class="name">Hi, my name is <span></span></p>
   
-    <h3>Aspiring security engineer and new web developer</h3>
+    <h3>Aspiring security engineer and curious web developer.</h3>
   </section>
   <div class="line"></div>
   <section id="projects">
