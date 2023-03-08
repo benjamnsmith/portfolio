@@ -31,28 +31,33 @@
             whole.
             Technology is changing at a rapid pace now more than ever, and continuing to design apps etc. requires a
             deep understanding of the underlying systems upon which they're built, and their seurity.
-            I really enjoy the annual <a
+            I really enjoy reading submissions from the annual <a
                 href="https://www.usenix.org/publications/proceedings" target="_blank">USENIX</a> conference, as well as the
             content posted by <a href="https://googleprojectzero.blogspot.com/" target="_blank">Google's Project Zero</a>.</p>
-        <p class="about"> Outside of tech, I'm really interested in languages
+        <p class="about"> Outside of tech, I'm interested in languages
             and cultures of the world. I study Russian and French in addition to CS, and spent my Fall 2022 semester in
-            Montpellier, France. There, I studied linguisitics and its appilcations, and tought English to elementary school
+            Montpellier, France. There, I studied linguisitics and its appilcations, and taught English to elementary school
             students.
         </p>
         <p class="about">
             I'm excited about computer systems and security, and I want everyone else to be too! I am an undergraduate teaching
             assistant for a computer systems class aimed at upperclassmen computer science minors or MIS students. I create weekly labs
             for them with the goal of exploring C, memory management, assembly code, and more. <br>
-            I also volunteer with the Hennepin County Library where I help patrons with computer skills - typing, web browsing, printing, 
-            job applications, etc. 
+            I also volunteer with the Hennepin County Library where I help patrons with basic computer skills (typing, web browsing, printing) as well
+            as with job applications and other online tasks. 
         </p> 
         <p class="quick_facts">
+        I'm interested in any programming language that allows me to hack together what I'm looking to achieve. I mostly use <span>Python</span> 
+            (<span class="subtype">Apache Thrift</span>, <span class="subtype">Flask</span>), but recently have been intrigued by <span>JavaScript</span>. 
+            This website is written mostly in <span>PHP</span>. In school, <span>C</span> was my language of choice. 
+            <br>
+            <br>
             I've recently become geeked about HTB and would love to share my experience there with you. Take a peek at my 
             <a href="https://app.hackthebox.com/profile/1415198" target="_blank">HTB profile</a> or 
             see some of my <a href="#">machine writeups</a>. 
             <br>
             <br>
-            In Feb 2023 my team and I won Deloitte's annual Cyber Threat Competition!
+            In Feb 2023 my team and I won Deloitte's annual Cyber Threat Competition!    
         </p>
 
     </section>

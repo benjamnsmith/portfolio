@@ -213,11 +213,27 @@ footer ul {
 .about {
     grid-column: 1 / 3;
     padding-right: 5rem;
+    color: var(--white);
 }
 
 .quick_facts {
     grid-column: 3;
+    color: var(--white);
 }
+
+
+
+.quick_facts > span {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.65rem;
+    color: var(--lightRed);
+}
+
+span.subtype {
+    font-size: var(--font-size);
+    color: var(--lightGreen);
+}
+
 
 /* footer section */
 
