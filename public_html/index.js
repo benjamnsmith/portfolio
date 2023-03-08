@@ -1,7 +1,7 @@
 var i = 0;
 var j = 1;
 var speed = 50;
-txts = ["benjamnsmith", 'Ben']
+txts = ["benjamnsmith.", 'Ben.']
 
 const container = document.getElementsByClassName('name')[0].children[0]
 
