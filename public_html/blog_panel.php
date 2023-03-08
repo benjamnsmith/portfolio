@@ -2,6 +2,8 @@
     <a href="create.php">New post</a>
     |
     <a href="logout.php">Log out</a>
+    |
+    <a href="save_project.php">Add project</a>
     <?php
 
     

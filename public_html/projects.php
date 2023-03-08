@@ -21,52 +21,73 @@
     ?>
 
   <section id="intro">
-    <p class="name">Here are some<span>Projects</span>I've been working on</p>
-    <p>The majority of my projects can be found on my <a href="https://github.com/benjamnsmith" target="_blank">GitHub</a></p>
+    <p class="name">Here are some<span>Projects</span>I've been working on.</p>
 
   </section>
   <div class="line"></div>
-  <div class="projects">
-    <section id="latest">
-      <article>
-        <h4>Latest project</h4>
-        <h3>Google Maps trip cost</h3>
-        <div class="latest-description">
-          <p>
-            In the summer of 2022, gas prices were a hot topic. I designed a web extension
-            to calculate the cost of a given driving trip so you can see just how much each trip will cost.
-            Dynamically alters the page to show trip cost inline with other trip details without pulling focus to the
-            extension.
-          </p>
-        </div>
-      </article>
-    </section>
-    <div class="line"></div>
-    <section id="others">
-      <article>
-        <h3>Syntactic Disambiguation</h3>
-        <p>Resolving syntactic disambiguities in sentences using the shift reduce
-          paradigm combined with backtracking. For my LING 5801 computational linguisitcs final project.
-        </p>
-      </article>
-      <div class="line"></div>
-      <article>
-        <h3>A study on typo-tolerant password verification</h3>
-        <p>Testing and analysis of a typo-tolerant password verficiation system (proposed in <a href="https://typtop.info/" target="_blank">this paper</a>).
-          For my CSCI 5271 computer security final project.
-        </p>
-      </article>
-      <div class="line"></div>
-      <article>
-        <h3>Linux device driver - bounded buffers</h3>
-        <p>An approach to the classic bounded buffer problem solved in the Linux kernel using device drivers.
-          For my CSCI 5103 operating systems course.
-        </p>
-      </article>
+    <section class="projects">
+      <h4>Latest project</h4>
+      <?php
+
+        include "../php/db_conn.php";
+
+        function getMonth($m){
+          if ($m === "01"){
+            return "Jan";
+          } else if ($m === "02"){
+            return "Feb";
+          } else if ($m === "03"){
+            return "Mar";
+          } else if ($m === "04"){
+            return "Apr";
+          } else if ($m === "05"){
+            return "May";
+          } else if ($m === "06"){
+            return "Jun";
+          } else if ($m === "07"){
+            return "Jul";
+          } else if ($m === "08"){
+            return "Aug";
+          } else if ($m === "09"){
+            return "Sep";
+          } else if ($m === "10"){
+            return "Oct";
+          } else if ($m === "11"){
+            return "Nov";
+          } else if ($m === "12"){
+            return "Dec";
+          } 
+    
+          return "None";
+    
+        }
+
+        $stmt = $pdo->prepare('SELECT title, body, created, skills FROM project ORDER BY created DESC');
+        $stmt->execute();
+
+        if ($stmt->rowCount() > 0) {
+          // output data of each row
+          while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $skills = explode(",", $row["skills"]);
+            echo '
+            <article>
+            <h3>' . $row["title"] . ' <em>(' . getMonth(substr($row["created"], 5, 2)) . ' ' . substr($row["created"], 0, 4) .')</em></h3>
+            <p>' . $row["body"] . '</p>
+            <p class="skills"><strong>SKILLS:</strong> ';
+            for($x = 0; $x < count($skills); $x++) {
+              echo "<span>" . $skills[$x] ."</span>" ;
+              if ($x+1 <> count($skills)){
+                echo ', ';
+              }
+            }
+            echo '</article>' ;    
+          }
+        } else {
+          echo "0 results";
+        }
+      ?>
     </section>
   </div>
-  
-
 
 </body>
 

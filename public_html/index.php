@@ -23,35 +23,53 @@
   <section id="terminal">
     <p class="name">Hi, my name is <span></span></p>
   
-    <!-- <h3>I design and analyze the internet</h3> -->
-    <h3>This will say something cute ^^</h3>
-    
-    <h3 class="prompt">  </h3>
-  
+    <h3>Aspiring security engineer and new web developer</h3>
   </section>
   <div class="line"></div>
   <section id="projects">
-    <article>
-      <h4>Latest project</h4>
-      <h3>Driving Cost Browser Extension</h3>
-      <div class="latest-description">
-        <p>
-          In the summer of 2022, gas prices were a hot topic. I designed a web extension
-          to calculate the cost of a given driving trip so you can see just how much each trip will cost.
-          Dynamically alters the page to show trip cost inline with other trip details without pulling focus to the extension.
-        </p>
-      </div>
-  
-    </article>
-    <article>
-      <h3 id="left_float">Syntax disambiguation</h3>
-      <p>As my final project for my computational linguistics course, I tackled ambiguous part-of-speech resolution in building syntax trees. We built a syntax tree producer based on the shift-reduce model that builds all valid syntax trees from a given context-free grammar (CFG).
-    </article>
-    <article>
-      <h3>Typo-tolerant password security</h3>
-      <p>For my computer security class, we analyzed a typo-tolerant password system (some really great work out of the University of Wisconsin - Madison, you can read about it on the <a href="https://typtop.info/" target="_blank">TypTop</a> website). We drew on work in computational linguistics to try and get the system to authorize us based on likely typos.</p>
-    </article>
-    <p>You can read about more of my projects on the <a href="./projects.html">Projects</a> page.</p>
+    <?php
+      include "../php/db_conn.php";
+      $stmt = $pdo->prepare('SELECT title, body FROM project ORDER BY created DESC');
+      $stmt->execute();
+    ?>
+      <?php
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        echo '
+        <article>
+          <h4>Latest project</h4>
+          <h3>' . $row["title"] . '</h3>
+          <div class="latest-description">
+            <p>' . $row["body"] . '</p>
+          </div>
+        </article>
+        ';
+
+      ?>
+      <?php
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        echo '
+        <article>
+          <h3 id="left_float">' . $row["title"] . '</h3>
+          <div class="latest-description">
+            <p>' . $row["body"] . '</p>
+          </div>
+        </article>
+        ';
+
+      ?>
+      <?php
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        echo '
+        <article>
+          <h3>' . $row["title"] . '</h3>
+          <div class="latest-description">
+            <p>' . $row["body"] . '</p>
+          </div>
+        </article>
+        ';
+
+      ?>
+    <p class="call_to_action">You can read about more of my projects on the <a href="./projects.php">Projects</a> page.</p>
   </section>
   <!-- <section id="contact">
     <div class="contact-box">
