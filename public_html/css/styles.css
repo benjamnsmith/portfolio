@@ -108,21 +108,6 @@ a:hover {
     animation: cursor-blink 1.2s steps(2) infinite;
 }
 
-
-.prompt{
-    margin-top: 2rem;
-    font-size: 3rem;
-    animation: blinkingText 1.3s infinite;
-}
-
-@keyframes blinkingText{
-    0%{     color: var(--white);    }
-    49%{    color: var(--white); }
-    60%{    color: transparent; }
-    99%{    color: transparent;  }
-    100%{   color: var(--white);    }
-}
-
 @keyframes cursor-blink {
     0% {
       opacity: 0;
@@ -166,6 +151,11 @@ article {
 
 #latest-description {
     font-size: 0.5rem;
+}
+
+.call_to_action {
+    font-size: 1.5rem !important;
+    text-align: center !important;
 }
 /* contact section */
 
