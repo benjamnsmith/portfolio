@@ -25,8 +25,27 @@
   <div class="line"></div>
   <section class="content">
     <div class="info">
-        <h2>Email me</h2>
-        <p>smit9524@umn.edu</p>
+        <div class="email">
+            <h2>Send me an email!</h2>
+        </div>
+        <div class="other-contact">
+            <ul>
+            <li><a href="mailto:smit9524@umn.edu" class="mail-pic">
+                <span class="fa-regular fa-envelope" aria-hidden=true></span>
+                <span class="fa-regular fa-envelope-open" aria-hidden=true></span>
+                <span class="sr-only">Email</span>
+            </a></li>
+            <li><a href='https://www.linkedin.com/in/benjamnsmith' target="_blank" class="linkedin-pic">
+                <span class="fa-brands fa-linkedin-in" aria-hidden=true></span>
+                <span class="fa-brands fa-linkedin" aria-hidden=true></span>
+                <span class="sr-only">LinkedIn</span></a></li>
+            <li><a href='https://github.com/benjamnsmith' target="_blank" class="github-pic">
+                <span class="fa-brands fa-github" aria-hidden=true></span>
+                <span class="fa-brands fa-square-github" aria-hidden=true></span>
+                <span class="sr-only">GitHub</span></a></li>
+            </ul>
+            
+        </div>
     </div>
   </section>
   <?php

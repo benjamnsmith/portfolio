@@ -1,7 +1,51 @@
 .info {
     margin: 5% 10%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
 }
 
-.content {
-    min-height: 90%;
+.other-contact > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.other-contact a {
+    color: var(--white) !important;
+    font-size: 400%;
+    
+}
+
+.other-contact a:hover {
+    color: var(--lightRed) !important;
+}
+
+.mail-pic:hover .fa-envelope,
+.mail-pic .fa-envelope-open {
+    display: none;
+}
+.mail-pic:hover .fa-envelope-open {
+    display: inline;
+}
+
+.github-pic:hover .fa-square-github,
+.github-pic .fa-github {
+    display: none;
+}
+.github-pic:hover .fa-github {
+    display: inline;
+}
+
+.linkedin-pic:hover .fa-linkedin,
+.linkedin-pic .fa-linkedin-in {
+    display: none;
+}
+.linkedin-pic:hover .fa-linkedin-in {
+    display: inline;
 }
