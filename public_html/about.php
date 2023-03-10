@@ -27,21 +27,28 @@
     <div class="line"></div>
     <section id="content">
         <div class="col1">
-            <p>&emsp;&emsp;&emsp;&emsp;I'm Ben, a computer systems student at the University of Minnesota - Twin Cities. I'm fascinated 
+            <p>
+                &emsp;&emsp;I'm Ben, a computer systems student at the University of Minnesota - Twin Cities. I'm fascinated 
                 by the construction of modern systems, from enterprise intranets to the world wide web. Keeping up with the latest 
                 technology is essential, and I'm passionate about exploring recent developments in <span>computer security</span> through sources 
                 like the <a href="https://www.usenix.org/publications/proceedings" target="_blank">USENIX</a> conference and 
                 <a href="https://googleprojectzero.blogspot.com/" target="_blank">Google's Project Zero</a>.</p>
 
-            <p>&emsp;&emsp;&emsp;&emsp;Aside from my studies, I enjoy learning about different cultures and languages. I speak <span>Russian</span> 
+            <p>
+                &emsp;&emsp;Aside from my studies, I enjoy learning about different cultures and languages. I speak <span>Russian</span> 
                 and <span>French</span> and had the chance to teach English to elementary school students during my time studying in Montpellier, France 
                 during Fall 2022.
             </p>
             
             <p>
-                &emsp;&emsp;&emsp;&emsp;As an undergraduate <span>teaching assistant</span>, I create and run weekly labs for upperclassmen computer science minors 
+                &emsp;&emsp;As an undergraduate <span>teaching assistant</span>, I create and run weekly labs for upperclassmen computer science minors 
                 and MIS students on topics around <span>computer systems</span> focusing on C, x86_64, and memory management. I also volunteer with the Hennepin County 
                 Library, helping patrons with basic computer skills and online tasks to provide access to digital resources.
+            </p>
+            <p>
+                <ul>
+                    <li>zxcvbn by Dropbox</li>
+                </ul>
             </p>
         </div>
         <div class="col2">
