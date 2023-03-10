@@ -35,8 +35,8 @@
                 <a href="https://googleprojectzero.blogspot.com/" target="_blank">Google's Project Zero</a>.</p>
 
             <p>
-                &emsp;&emsp;Aside from my studies, I enjoy learning about different cultures and languages. I speak <span>Russian</span> 
-                and <span>French</span> and had the chance to teach English to elementary school students during my time studying in Montpellier, France 
+                &emsp;&emsp;Aside from my studies, I enjoy learning about different cultures and languages. I speak <span>French</span> 
+                and <span>Russian</span> and had the chance to teach English to elementary school students during my time studying in Montpellier, France 
                 during Fall 2022.
             </p>
             
@@ -45,12 +45,8 @@
                 and MIS students on topics around <span>computer systems</span> focusing on C, x86_64, and memory management. I also volunteer with the Hennepin County 
                 Library, helping patrons with basic computer skills and online tasks to provide access to digital resources.
             </p>
-            <p>
-                <ul>
-                    <li>zxcvbn by Dropbox</li>
-                </ul>
-            </p>
         </div>
+        <div class="line" id="separator"></div>
         <div class="col2">
             <img src="./img/me-autumn.jpg" />
             <p class="quick_facts">
