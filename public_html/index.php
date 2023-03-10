@@ -29,10 +29,13 @@
   <section id="projects">
     <?php
       include "../php/db_conn.php";
-      $stmt = $pdo->prepare('SELECT title, body FROM project ORDER BY created DESC');
-      $stmt->execute();
+      if (isset($pdo)){
+        $stmt = $pdo->prepare('SELECT title, body FROM project ORDER BY created DESC');
+        $stmt->execute();
+      }
     ?>
       <?php
+      if (isset($stmt)){
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         echo '
         <article>
@@ -43,9 +46,12 @@
           </div>
         </article>
         ';
+      }
+        
 
       ?>
       <?php
+      if (isset($stmt)){
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         echo '
         <article>
@@ -55,9 +61,12 @@
           </div>
         </article>
         ';
+      }
+        
 
       ?>
       <?php
+      if (isset($stmt)){
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         echo '
         <article>
@@ -67,7 +76,7 @@
           </div>
         </article>
         ';
-
+      }
       ?>
     <p class="call_to_action">You can read about more of my projects on the <a href="./projects.php">Projects</a> page.</p>
   </section>

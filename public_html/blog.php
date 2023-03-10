@@ -21,7 +21,6 @@
     ?>
      <section id="intro">
         <p class="name"><span>Blog</span></p>
-        <p>This is mostly HTB lab writeups</p>
     </section>
     <div class="line"></div>
     <section>

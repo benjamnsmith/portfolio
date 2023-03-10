@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
+  <link href="./css/generic.css" rel="stylesheet">
   <link href="./css/projects.css" rel="stylesheet">
   <title>benjamnsmith - Projects</title>
 </head>
@@ -61,30 +62,38 @@
           return "None";
     
         }
-
-        $stmt = $pdo->prepare('SELECT title, body, created, skills FROM project ORDER BY created DESC');
-        $stmt->execute();
-
-        if ($stmt->rowCount() > 0) {
-          // output data of each row
-          while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $skills = explode(",", $row["skills"]);
-            echo '
-            <article>
-            <h3>' . $row["title"] . ' <em>(' . getMonth(substr($row["created"], 5, 2)) . ' ' . substr($row["created"], 0, 4) .')</em></h3>
-            <p>' . $row["body"] . '</p>
-            <p class="skills"><strong>SKILLS:</strong> ';
-            for($x = 0; $x < count($skills); $x++) {
-              echo "<span>" . $skills[$x] ."</span>" ;
-              if ($x+1 <> count($skills)){
-                echo ', ';
+        if (isset($pdo)){
+          $stmt = $pdo->prepare('SELECT title, body, created, skills, link FROM project ORDER BY created DESC');
+          $stmt->execute();
+  
+          if ($stmt->rowCount() > 0) {
+            // output data of each row
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              $skills = explode(",", $row["skills"]);
+              echo '
+              <article>
+              <h3>' . $row["title"] . ' <em>(' . getMonth(substr($row["created"], 5, 2)) . ' ' . substr($row["created"], 0, 4) .')</em></h3>
+              <p>' . $row["body"] . '</p>
+              <div class="meta">
+              <p class="skills"><strong>SKILLS:</strong> ';
+              for($x = 0; $x < count($skills); $x++) {
+                echo "<span>" . $skills[$x] ."</span>" ;
+                if ($x+1 <> count($skills)){
+                  echo ', ';
+                }
               }
+              echo '</p>';
+              if ($row["link"] <> ""){
+                echo ' <a href="' . $row["link"] .'" class="gh">&lt; GitHub Repo &gt;</a>' ;
+              }
+                  
+              echo '</div></article>';
             }
-            echo '</article>' ;    
+          } else {
+            echo "0 results";
           }
-        } else {
-          echo "0 results";
         }
+        
       ?>
     </section>
   </div>
