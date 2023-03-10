@@ -113,14 +113,11 @@ a:hover {
       opacity: 0;
     }
   }
-  
-
-
 
 /* projects section */
 
 #projects {
-    padding: 1rem 10%;
+    padding: 5% 13%;
 }
 
 article {
